@@ -8,3 +8,4 @@ java EP config6.txt
 java EP config7.txt
 java EP config8.txt
 java EP config9.txt
+pause
