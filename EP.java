@@ -15,7 +15,7 @@ class Mochila {
     return p;
   }
 
-  int pesoTotal() { // retorna valor total dentro da mochila
+  int valorTotal() { // retorna valor total dentro da mochila
     int v;
     for(Item i : this.carga) v += i.valor;
     return v;
