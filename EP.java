@@ -66,12 +66,12 @@ class EP {
     
     Mochila m1 = criaMochila(config);
     runTime = System.nanoTime();
-    //Tentativa.tentativa(m1);
+    Tentativa.tentativa(m1);
     runTime = (System.nanoTime() - runTime);
-    //System.out.println("Tentativa e erro: " + m1.carga + " " + m1.pesoTotal() + " " + m1.valorTotal());
-    //System.out.println("Tempo: " + runTime/1000000.0 + "ms");
-    //valorOtimo = m1.valorTotal();
-    valorOtimo = 160;
+    System.out.println("Tentativa e erro: " + m1.carga + " " + m1.pesoTotal() + " " + m1.valorTotal());
+    System.out.println("Tempo: " + runTime/1000000.0 + "ms");
+    valorOtimo = m1.valorTotal();
+    //valorOtimo = 160;
     
     Mochila m2 = criaMochila(config);
     runTime = System.nanoTime();
