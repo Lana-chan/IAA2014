@@ -57,7 +57,9 @@ class EP {
   }
   
   public static void main(String[] args) {
-    String config = args[0];
+    String config;
+    if(args.length > 0) config = args[0];
+    else config = "config.txt";
     
     // TODO: chamar algoritmos
     Mochila m1 = criaMochila(config);
