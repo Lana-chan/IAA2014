@@ -15,7 +15,7 @@ public class Guloso {
     for(int i = 0; i < bag.itens.length; i++) { //coloca os itens que foram ordenados dentro da mochila até encher
       bag.carga.add(A[i]);
       if (bag.capacidade - bag.pesoTotal() < 0) {
-        bag.carga.remove(A[i]);
+        bag.carga.remove(bag.carga.size()-1);
       }
     }
     return;
@@ -37,7 +37,7 @@ public class Guloso {
     for(int i = 0; i < bag.itens.length; i++){ //coloca os itens que foram ordenados dentro da mochila até encher
       bag.carga.add(A[i]);
       if (bag.capacidade - bag.pesoTotal() < 0){
-        bag.carga.remove(A[i]);
+        bag.carga.remove(bag.carga.size()-1);
         return;
       }
     }
