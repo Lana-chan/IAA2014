@@ -23,7 +23,9 @@ class geraTeste {
     
     writer.println("100"); // capacidade da mochila
     
-    int i = randInt(1,20); // número de ítens
+    int i; // número de ítens
+    if(args.length > 1) i = Integer.parseInt(args[1]);
+    else i = randInt(1,20);
     writer.println(i);
     
     for(;i > 0;i--) { // ítem
