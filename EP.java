@@ -1,7 +1,7 @@
 import java.util.*;
 
 class Item { // um ítem
-  int valor, int peso;
+  int valor, peso;
 }
 
 class Mochila {
@@ -9,7 +9,17 @@ class Mochila {
   Item[] itens;
   List<Integer> carga = new ArrayList<Integer>();
   
-  // TODO: valor total, peso total
+  int pesoTotal() { // retorna peso total dentro da mochila
+    int p;
+    for(Item i : this.carga) p += i.peso;
+    return p;
+  }
+
+  int pesoTotal() { // retorna valor total dentro da mochila
+    int v;
+    for(Item i : this.carga) v += i.valor;
+    return v;
+  }
 }
 
 class EP {
@@ -34,11 +44,21 @@ class EP {
       it.valor = Integer.parseInt(inp[1]);
       Mochila.itens[n] = it;
     }
+    
+    return m;
   }
   
   public static void main(String[] args) {
     String config = args[0];
     
     // TODO: chamar algoritmos
+    Mochila m1 = criaMochila(config);
+    //Tentativa.tentativa(m1);
+    Mochila m2 = criaMochila(config);
+    //Guloso.guloso1(m2);
+    Mochila m3 = criaMochila(config);
+    //Guloso.guloso2(m3);
+    
+    // TODO: saída para console
   }
 }
