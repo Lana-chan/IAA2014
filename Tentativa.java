@@ -9,7 +9,10 @@ public class Tentativa {
       bag.carga.clear(); // começa com mochila vazia
       for(int i = 0; i < bag.itens.length; i++) if((n & (int)Math.pow(2,i)) != 0) bag.carga.add(i); // faz combinação binária
       if(bag.pesoTotal() < bag.capacidade) { // se cabe na mochila
-        if(bag.valorTotal() > melhorValor) melhor = new ArrayList<Integer>(bag.carga); // se for melhor que o anterior
+        if(bag.valorTotal() > melhorValor) { // se for melhor que o anterior
+          melhorValor = bag.valorTotal();
+          melhor = new ArrayList<Integer>(bag.carga);
+        }
       }
     }
     
