@@ -16,9 +16,9 @@ public class Guloso {
       bag.carga.add(A[i]);
       if (bag.capacidade - bag.pesoTotal() < 0) {
         bag.carga.remove(i);
-        return;
       }
     }
+    return;
   }
   
   public static void guloso2(Mochila bag) {
