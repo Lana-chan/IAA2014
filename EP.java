@@ -61,17 +61,30 @@ class EP {
     if(args.length > 0) config = args[0];
     else config = "config.txt";
     
-    // TODO: chamar algoritmos
-    Mochila m1 = criaMochila(config);
-    //Tentativa.tentativa(m1);
-    //System.out.println("Tentativa e erro: " + m1.carga + " " + m1.pesoTotal + " " + m1.valorTotal);
-    Mochila m2 = criaMochila(config);
-    Guloso.guloso1(m2);
-    System.out.println("Guloso 1: " + m2.carga + " " + m2.pesoTotal() + " " + m2.valorTotal());
-    Mochila m3 = criaMochila(config);
-    Guloso.guloso2(m3);
-    System.out.println("Guloso 2: " + m3.carga + " " + m3.pesoTotal() + " " + m3.valorTotal());
+    long runTime;
+    double valorOtimo;
     
-    // TODO: tempo de execução, taxa de aproveitamento para gulosos
+    Mochila m1 = criaMochila(config);
+    runTime = System.nanoTime();
+    //Tentativa.tentativa(m1);
+    runTime = (System.nanoTime() - runTime);
+    //System.out.println("Tentativa e erro: " + m1.carga + " " + m1.pesoTotal() + " " + m1.valorTotal());
+    //System.out.println("Tempo: " + runTime/1000000.0 + "ms");
+    //valorOtimo = m1.valorTotal();
+    valorOtimo = 160;
+    
+    Mochila m2 = criaMochila(config);
+    runTime = System.nanoTime();
+    Guloso.guloso1(m2);
+    runTime = (System.nanoTime() - runTime);
+    System.out.println("Guloso 1: " + m2.carga + " " + m2.pesoTotal() + " " + m2.valorTotal());
+    System.out.println("Tempo: " + runTime/1000000.0 + "ms Aproveitamento: " + (m2.valorTotal()/valorOtimo)*100.0 + "%");
+    
+    Mochila m3 = criaMochila(config);
+    runTime = System.nanoTime();
+    Guloso.guloso2(m3);
+    runTime = (System.nanoTime() - runTime);
+    System.out.println("Guloso 2: " + m3.carga + " " + m3.pesoTotal() + " " + m3.valorTotal());
+    System.out.println("Tempo: " + runTime/1000000.0 + "ms Aproveitamento: " + (m3.valorTotal()/valorOtimo)*100.0 + "%");
   }
 }
