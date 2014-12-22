@@ -11,13 +11,13 @@ class Mochila {
   
   int pesoTotal() { // retorna peso total dentro da mochila
     int p;
-    for(int i; i < this.carga.size(); i++) p += this.item[i].peso;
+    for(int i : this.carga) p += this.item[i].peso;
     return p;
   }
 
   int valorTotal() { // retorna valor total dentro da mochila
     int v;
-    for(int i; i < this.carga.size(); i++) v += this.item[i].valor;
+    for(int i : this.carga) v += this.item[i].valor;
     return v;
   }
 }
