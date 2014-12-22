@@ -62,13 +62,13 @@ class EP {
     // TODO: chamar algoritmos
     Mochila m1 = criaMochila(config);
     //Tentativa.tentativa(m1);
-    //System.out.println("Tentativa e erro: "+m1.carga+" "+m1.pesoTotal+" "+m1.valorTotal);
+    //System.out.println("Tentativa e erro: " + m1.carga + " " + m1.pesoTotal + " " + m1.valorTotal);
     Mochila m2 = criaMochila(config);
     Guloso.guloso1(m2);
-    System.out.println("Guloso 1: "+m2.carga+" "+m2.pesoTotal()+" "+m2.valorTotal());
+    System.out.println("Guloso 1: " + m2.carga + " " + m2.pesoTotal() + " " + m2.valorTotal());
     Mochila m3 = criaMochila(config);
     Guloso.guloso2(m3);
-    System.out.println("Guloso 2: "+m3.carga+" "+m3.pesoTotal()+" "+m3.valorTotal());
+    System.out.println("Guloso 2: " + m3.carga + " " + m3.pesoTotal() + " " + m3.valorTotal());
     
     // TODO: tempo de execução, taxa de aproveitamento para gulosos
   }
